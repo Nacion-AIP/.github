@@ -1,7 +1,7 @@
 # Nación-AIP
 
-We build custom AI solutions for small and medium businesses in Mexico.  
-From machine learning pipelines to production-ready APIs and infrastructure.
+🚀 We build custom AI solutions for small and medium businesses in Mexico.  
+🧠 From machine learning pipelines to production-ready APIs and infrastructure.
 
 ---
 
