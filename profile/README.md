@@ -20,6 +20,18 @@ We manage multiple repositories across several domains:
 
 ---
 
+## Repository Naming Convention
+
+We follow a **domain-based naming convention** to keep the repository structure scalable and clear:
+
+| Prefix   | Domain               | Example Repositories               |
+|----------|----------------------|------------------------------------|
+| `dp-`    | Demand Planning       | `dp-app`, `dp-etl-pipelines`       |
+| `ka-`    | Knowledge Agents      | `ka-app`                           |
+| `core-`  | Shared Infra/Tooling  | `core-terraform`, `auth-infra`     |
+
+---
+
 ## Getting Started
 
 To contribute or set up a local environment:
