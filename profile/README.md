@@ -14,7 +14,7 @@ We manage multiple repositories across several domains:
 | Core Infrastructure      | Terraform blueprints, CI/CD workflows, authentication, shared tooling| `core-terraform`, `auth-infra`                |
 | AI/ML Engines            | Data ingestion, forecasting, and optimization pipelines              | `dp-forecast-engine`, `dp-etl-pipelines`, `dp-order-optimizer` |
 | Client-Facing Apps       | Frontend interfaces for clients and internal teams (Next.js)         | `dp-app`, `ka-app`                            |
-| Internal Tools & Utilities | Developer tools, monitoring, and repo templates                   | `repo-template-py`, `metrics-dashboard`       |
+| Internal Tools & Utilities | Developer tools, monitoring, and repo templates                   | `...`       |
 
 > To browse all repositories, see the [Repositories tab »](https://github.com/orgs/Nacion-AIP/repositories)
 
