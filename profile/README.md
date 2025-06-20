@@ -7,7 +7,7 @@
 
 ## 📁 Repository Overview
 
-We currently manage **9 repositories** across multiple domains:
+We currently manage **7 repositories** across multiple domains:
 
 | Domain | Purpose | Examples |
 |--------|---------|----------|
