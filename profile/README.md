@@ -40,42 +40,69 @@ To contribute or set up a local environment:
 2. **Install dependencies**
    - For Python projects, use [`uv`](https://github.com/astral-sh/uv)
    - For Node.js projects, use [`pnpm`](https://pnpm.io/)
-3. Follow setup instructions in the repo’s `README.md`
-4. Review our [Contribution Guide](https://github.com/Nacion-AIP/.github/blob/main/CONTRIBUTING.md)
+3. **Set up pre-commit hooks** (Python projects only)
+   ```bash
+   uv run pre-commit install
+   ```
+4. Follow setup instructions in the repo's `README.md`
+5. Review our [Contribution Guide](https://github.com/Nacion-AIP/.github/blob/main/CONTRIBUTING.md)
 
 ---
 
-## Documentation & Internal Resources
+## Code Quality Standards
 
-- **Confluence (Internal Docs):** [link]
-- **API Reference:** [link to Swagger/Postman or repo path]
-- **Data Dictionary:** [link or repo]
-- **Infrastructure Diagrams:** [link or diagrams in `core-terraform`]
+### Python Projects
+
+All Python repositories use automated code quality checks that run before each commit. These checks ensure consistent code style, security, and quality across the team.
+
+**Pre-commit hooks include:**
+- **Black**: Code formatting
+- **Ruff**: Linting and code fixes
+- **MyPy**: Static type checking
+- **Bandit**: Security scanning
+- **Pytest**: Test execution
+- **Import organization**: Automatic import sorting and cleanup
+
+**Setup (required for Python contributors):**
+```bash
+# Install pre-commit hooks (one-time setup)
+uv run pre-commit install
+
+# Run all checks manually (recommended before PR)
+uv run pre-commit run --all-files
+```
+
+**What happens during commits:**
+- Pre-commit automatically runs on staged files
+- If checks fail, the commit is blocked until issues are fixed
+- Most formatting issues are auto-fixed - just re-stage and commit
+
+> **Note**: Pre-commit hooks are already configured in Python repositories with `.pre-commit-config.yaml` and `bandit.yaml` files.
 
 ---
 
 ## Standards & Best Practices
 
-- Python and Node project templates available in `repo-template-*`
-- CI/CD configured with GitHub Actions (`.github/workflows`)
-- Secrets managed using GitHub Encrypted Secrets
-- Infrastructure managed with Terraform (`core-terraform`)
-- Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](https://link-to-ts-style-guide)
+Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](https://link-to-ts-style-guide)
 
 ---
 
-## Tooling Summary
+## Contributing Guidelines
 
-| Area              | Tool / Stack                      |
-|-------------------|-----------------------------------|
-| Package Management| `uv` (Python), `pnpm` (Node.js)   |
-| ML Lifecycle      | MLflow                            |
-| Infra Provisioning| Terraform                         |
-| Monitoring & Logs | TBD / in development              |
+### Before submitting a PR:
 
----
+**For Python projects:**
+1. Ensure pre-commit hooks are installed: `uv run pre-commit install`
+2. Run all quality checks: `uv run pre-commit run --all-files`
+3. Fix any issues reported by the checks
+4. All tests must pass
 
-## Contact & Support
+**For all projects:**
+- Follow the repository's specific setup instructions
+- Write tests for new functionality
+- Update documentation as needed
 
-- Bug or issue? Open a GitHub Issue or Discussion in the relevant repository.
-- DevOps or infrastructure support: `#devops-internal` on Slack
+### PR Review Process:
+- All PRs require at least 1 codeowner review before merging
+- Address all feedback before requesting re-review
+- Ensure CI/CD checks pass
