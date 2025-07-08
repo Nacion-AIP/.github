@@ -13,7 +13,8 @@ We manage multiple repositories across several domains:
 |--------------------------|----------------------------------------------------------------------|-----------------------------------------------|
 | Core Infrastructure      | Terraform blueprints, CI/CD workflows, authentication, shared tooling| `core-terraform`, `auth-infra`                |
 | AI/ML Engines            | Data ingestion, forecasting, and optimization pipelines              | `dp-forecast-engine`, `dp-etl-pipelines`, `dp-order-optimizer` |
-| Client-Facing Apps       | Frontend interfaces for clients and internal teams (Next.js)         | `dp-app`, `ka-app`                            |
+| Client-Facing Apps       | Frontend interfaces for clients and internal teams (Next.js)         | `dp-app`, `dp-app-legacy`, `ka-app`                            |
+| API Backends             | REST APIs with auth logic and data services                          | `dp-api`                                      |
 | Internal Tools & Utilities | Developer tools, monitoring, and repo templates                   | `...`       |
 
 > To browse all repositories, see the [Repositories tab »](https://github.com/orgs/Nacion-AIP/repositories)
@@ -26,7 +27,7 @@ We follow a **domain-based naming convention** to keep the repository structure 
 
 | Prefix   | Domain               | Example Repositories               |
 |----------|----------------------|------------------------------------|
-| `dp-`    | Demand Planning       | `dp-app`, `dp-etl-pipelines`       |
+| `dp-`    | Demand Planning       | `dp-app`, `dp-api`, `dp-app-legacy`, `dp-etl-pipelines`       |
 | `ka-`    | Knowledge Agents      | `ka-app`                           |
 | `core-`  | Shared Infra/Tooling  | `core-terraform`, `auth-infra`     |
 
@@ -81,7 +82,7 @@ uv run pre-commit run --all-files
 
 ---
 
-## Standards & Best Practices
+## Style Guides
 
 Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](https://link-to-ts-style-guide)
 
@@ -106,3 +107,13 @@ Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](h
 - All PRs require at least 1 codeowner review before merging
 - Address all feedback before requesting re-review
 - Ensure CI/CD checks pass
+
+---
+
+## Deprecation Notice
+
+| Deprecated Repo | Replaced by                   | Notes                                     |
+|------------------|-------------------------------|-------------------------------------------|
+| `dp-app-legacy`  | `dp-api` + `dp-app`           | Split into backend and frontend repos     |
+|                  |                               | Retained as `dp-app-legacy` for reference |
+
