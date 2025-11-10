@@ -1,23 +1,18 @@
 # Nación-AIP
 
-We build custom AI solutions for small and medium businesses in Mexico.  
-From machine learning pipelines to production-ready APIs and infrastructure.
+## Team Playbook
 
----
+**How we work, how we ship, how we win.**
 
-## Repository Overview
+Our development culture and practices that enable us to ship working software every week:
 
-We manage multiple repositories across several domains:
+- 📜 [**Ship First Manifesto**](./docs/01-ship-first-manifesto.md) - Our core beliefs and commitments
+- 🗓️ [**Weekly Rhythm**](./docs/02-weekly-rhythm.md) - Meeting cadence, standups, and shipping schedule
+- ✂️ [**Breaking Down Work**](./docs/03-breaking-down-work.md) - How to slice features for fast delivery
+- 👤 [**Issue Ownership**](./docs/04-issue-ownership.md) - Who owns what and why
+- ✅ [**Shipping Checklist**](./docs/05-shipping-checklist.md) - Standards and checklists for deployment
 
-| Domain                   | Purpose                                                              | Example Repos                                 |
-|--------------------------|----------------------------------------------------------------------|-----------------------------------------------|
-| Core Infrastructure      | Terraform blueprints, CI/CD workflows, authentication, shared tooling| `core-terraform`, `auth-infra`                |
-| AI/ML Engines            | Data ingestion, forecasting, and optimization pipelines              | `dp-forecast-engine`, `dp-etl-pipelines`, `dp-order-optimizer` |
-| Client-Facing Apps       | Frontend interfaces for clients and internal teams (Next.js)         | `dp-app`, `dp-app-legacy`, `ka-app`                            |
-| API Backends             | REST APIs with auth logic and data services                          | `dp-api`                                      |
-| Internal Tools & Utilities | Developer tools, monitoring, and repo templates                   | `...`       |
-
-> To browse all repositories, see the [Repositories tab »](https://github.com/orgs/Nacion-AIP/repositories)
+**New to the team?** Start with the [Manifesto](./docs/01-ship-first-manifesto.md), then read the [Weekly Rhythm](./docs/02-weekly-rhythm.md).
 
 ---
 
@@ -25,12 +20,12 @@ We manage multiple repositories across several domains:
 
 We follow a **domain-based naming convention** to keep the repository structure scalable and clear:
 
-| Prefix   | Domain               | Example Repositories               |
-|----------|----------------------|------------------------------------|
-| `dp-`    | Demand Planning       | `dp-app`, `dp-api`, `dp-app-legacy`, `dp-etl-pipelines`       |
-| `ka-`    | Knowledge Agents      | `ka-app`                           |
-| `core-`  | Shared Infra/Tooling  | `core-terraform`, `auth-infra`     |
-
+| Prefix   | Domain               |
+|----------|----------------------|
+| `dp-`    | Demand Planning      |
+| `ka-`    | Knowledge Agents     |
+| `core-`  | Shared Infra/Tooling |
+| `av-`    | Avis (Old Project)   |
 ---
 
 ## Getting Started
@@ -102,6 +97,7 @@ Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](h
 - Follow the repository's specific setup instructions
 - Write tests for new functionality
 - Update documentation as needed
+- Review our [Team Playbook](./docs/README.md) for how we work
 
 ### PR Review Process:
 - All PRs require at least 1 codeowner review before merging
@@ -116,4 +112,3 @@ Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](h
 |------------------|-------------------------------|-------------------------------------------|
 | `dp-app-legacy`  | `dp-api` + `dp-app`           | Split into backend and frontend repos     |
 |                  |                               | Retained as `dp-app-legacy` for reference |
-
