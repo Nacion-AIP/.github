@@ -6,11 +6,11 @@
 
 Our development culture and practices that enable us to ship working software every week:
 
-- 📜 [**Ship First Manifesto**](./docs/01-ship-first-manifesto.md) - Our core beliefs and commitments
-- 🗓️ [**Weekly Rhythm**](./docs/02-weekly-rhythm.md) - Meeting cadence, standups, and shipping schedule
-- ✂️ [**Breaking Down Work**](./docs/03-breaking-down-work.md) - How to slice features for fast delivery
-- 👤 [**Issue Ownership**](./docs/04-issue-ownership.md) - Who owns what and why
-- ✅ [**Shipping Checklist**](./docs/05-shipping-checklist.md) - Standards and checklists for deployment
+- [**Ship First Manifesto**](./docs/01-ship-first-manifesto.md) - Our core beliefs and commitments
+- [**Weekly Rhythm**](./docs/02-weekly-rhythm.md) - Meeting cadence, standups, and shipping schedule
+- [**Breaking Down Work**](./docs/03-breaking-down-work.md) - How to slice features for fast delivery
+- [**Issue Ownership**](./docs/04-issue-ownership.md) - Who owns what and why
+- [**Shipping Checklist**](./docs/05-shipping-checklist.md) - Standards and checklists for deployment
 
 **New to the team?** Start with the [Manifesto](./docs/01-ship-first-manifesto.md), then read the [Weekly Rhythm](./docs/02-weekly-rhythm.md).
 
