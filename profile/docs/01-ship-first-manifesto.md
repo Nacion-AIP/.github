@@ -7,26 +7,26 @@
 
 **Working software over perfect architecture**  
 **Deployed code over reviewed code**  
-**Real feedback over smart assumptions**  
+**Real feedback over assumptions**  
 **This week over someday**
 
 ---
 
 ### Our Commitments
 
-**🚢 We ship every Thursday**  
+**We ship every Thursday**  
 Something working. In production. Used by clients.
 
-**🔄 We integrate daily**  
+**We integrate daily**  
 If you haven't merged in 2 days, you're building something too big.
 
-**📦 We build in slices, not layers**  
-Features go end-to-end. No one owns "just the backend."
+**We build in slices, not layers**  
+Features go end-to-end.
 
-**🎯 We start simple**  
+**We start simple**  
 The dumbest thing that works beats the elegant thing that's not done.
 
-**🗑️ We delete without ego**  
+**We delete without ego**  
 Sunk cost kills startups. Bad code in production > perfect code in your head.
 
 ---
