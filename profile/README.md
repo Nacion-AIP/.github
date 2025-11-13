@@ -99,10 +99,30 @@ Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](h
 - Update documentation as needed
 - Review our [Team Playbook](./docs/README.md) for how we work
 
-### PR Review Process:
-- All PRs require at least 1 codeowner review before merging
-- Address all feedback before requesting re-review
-- Ensure CI/CD checks pass
+### PR Review Process
+
+**Branch Protection:**
+- **Staging branch**: Requires 1 approval from any senior team member (Tech Lead, Senior Engineer, Fullstack)
+- **Main branch**: Requires 1 approval from CODEOWNERS (Tech Lead or Senior Engineer)
+
+**Review Expectations:**
+- Staging PRs: Reviewed within 4 hours (ship fast, test on staging)
+- Main PRs: Reviewed within 1 day (ship safely to production)
+- All conversation threads must be resolved before merging
+
+**Before submitting a PR:**
+
+**For Python projects:**
+1. Ensure pre-commit hooks are installed: `uv run pre-commit install`
+2. Run all quality checks: `uv run pre-commit run --all-files`
+3. Fix any issues reported by the checks
+4. All tests must pass
+
+**For all projects:**
+- Follow the repository's specific setup instructions
+- Write tests for new functionality
+- Update documentation as needed
+- Review our [Team Playbook](./docs/README.md) for how we work
 
 ---
 
