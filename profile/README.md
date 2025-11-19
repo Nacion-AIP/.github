@@ -1,47 +1,59 @@
 # Nación-AIP
 
+This document provides a brief overview of the repository structure, naming conventions, and essential information required to work within the Nación-AIP organization. For detailed documentation, refer to the team's Confluence space:
+
+[Confluence - Team Space](https://entropia-team.atlassian.net/wiki/x/7wC7Aw)
+
+---
+
 ## Team Playbook
 
-**How we work, how we ship, how we win.**
+The complete documentation for development culture, workflows, standards, processes, deployment, onboarding, and engineering practices is maintained in the team's knowledge base.
 
-Our development culture and practices that enable us to ship working software every week:
+Contents include:
+- Development culture and weekly rhythm
+- PR review and approval guidelines
+- Deployment procedures
+- Development environment setup
+- Architecture and design patterns
+- Runbooks and troubleshooting
+- Onboarding resources
 
-- [**Ship First Manifesto**](./docs/01-ship-first-manifesto.md) - Our core beliefs and commitments
-- [**Weekly Rhythm**](./docs/02-weekly-rhythm.md) - Meeting cadence, standups, and shipping schedule
-- [**Breaking Down Work**](./docs/03-breaking-down-work.md) - How to slice features for fast delivery
-- [**Issue Ownership**](./docs/04-issue-ownership.md) - Who owns what and why
-- [**Shipping Checklist**](./docs/05-shipping-checklist.md) - Standards and checklists for deployment
-
-**New to the team?** Start with the [Manifesto](./docs/01-ship-first-manifesto.md), then read the [Weekly Rhythm](./docs/02-weekly-rhythm.md).
+[Confluence - Team Handbook](https://entropia-team.atlassian.net/wiki/spaces/naip/folder/358449153?atlOrigin=eyJpIjoiMTBjMzJlM2E0ZTY1NGI1ZWJkZDk2MDA0N2QxNWE2MzMiLCJwIjoiYyJ9)
 
 ---
 
 ## Repository Naming Convention
 
-We follow a **domain-based naming convention** to keep the repository structure scalable and clear:
+Repositories follow a domain-oriented naming structure:
 
-| Prefix   | Domain               |
-|----------|----------------------|
-| `dp-`    | Demand Planning      |
-| `ka-`    | Knowledge Agents     |
-| `core-`  | Shared Infra/Tooling |
-| `av-`    | Avis (Old Project)   |
+| Prefix | Domain |
+|--------|----------------------|
+| `dp-` | Demand Planning |
+| `ka-` | Knowledge Agents |
+| `core-` | Shared Infrastructure |
+| `av-` | Legacy Avis Project |
+
+This ensures scalable organization across product areas.
+
 ---
 
 ## Getting Started
 
-To contribute or set up a local environment:
+1. Clone the repository.
 
-1. **Clone the repository**
-2. **Install dependencies**
-   - For Python projects, use [`uv`](https://github.com/astral-sh/uv)
-   - For Node.js projects, use [`pnpm`](https://pnpm.io/)
-3. **Set up pre-commit hooks** (Python projects only)
+2. Install dependencies:
+   - Python projects use `uv` for environment and package management.
+   - Node.js projects use `pnpm`.
+
+3. (Python) Install pre-commit hooks:
    ```bash
    uv run pre-commit install
    ```
-4. Follow setup instructions in the repo's `README.md`
-5. Review our [Contribution Guide](https://github.com/Nacion-AIP/.github/blob/main/CONTRIBUTING.md)
+
+4. Follow any additional setup steps described in the repository's internal README.
+
+5. Consult the Confluence documentation for process and workflow details.
 
 ---
 
@@ -49,86 +61,70 @@ To contribute or set up a local environment:
 
 ### Python Projects
 
-All Python repositories use automated code quality checks that run before each commit. These checks ensure consistent code style, security, and quality across the team.
+Python repositories use automated checks through pre-commit. These include:
+- Black for formatting
+- Ruff for linting and fixes
+- MyPy for static typing
+- Bandit for security scanning
+- Pytest for test execution
+- Import sorting and cleanup
 
-**Pre-commit hooks include:**
-- **Black**: Code formatting
-- **Ruff**: Linting and code fixes
-- **MyPy**: Static type checking
-- **Bandit**: Security scanning
-- **Pytest**: Test execution
-- **Import organization**: Automatic import sorting and cleanup
+Run checks manually:
 
-**Setup (required for Python contributors):**
 ```bash
-# Install pre-commit hooks (one-time setup)
-uv run pre-commit install
-
-# Run all checks manually (recommended before PR)
 uv run pre-commit run --all-files
 ```
 
-**What happens during commits:**
-- Pre-commit automatically runs on staged files
-- If checks fail, the commit is blocked until issues are fixed
-- Most formatting issues are auto-fixed - just re-stage and commit
+### Node/TypeScript Projects
 
-> **Note**: Pre-commit hooks are already configured in Python repositories with `.pre-commit-config.yaml` and `bandit.yaml` files.
-
----
-
-## Style Guides
-
-Style guides for [Python](https://link-to-python-style-guide) and [TypeScript](https://link-to-ts-style-guide)
+Use the ESLint configuration and Prettier rules included in each repository. Additional language-specific guidelines are available in the documentation.
 
 ---
 
 ## Contributing Guidelines
 
-### Before submitting a PR:
+Before submitting a pull request:
 
-**For Python projects:**
-1. Ensure pre-commit hooks are installed: `uv run pre-commit install`
-2. Run all quality checks: `uv run pre-commit run --all-files`
-3. Fix any issues reported by the checks
-4. All tests must pass
+### Python Projects
 
-**For all projects:**
-- Follow the repository's specific setup instructions
-- Write tests for new functionality
-- Update documentation as needed
-- Review our [Team Playbook](./docs/README.md) for how we work
+- Install pre-commit hooks.
+- Run all checks:
+  ```bash
+  uv run pre-commit run --all-files
+  ```
+- Resolve any reported issues.
+- Ensure all tests pass.
 
-### PR Review Process
+### All Projects
 
-**Branch Protection:**
-- **Staging branch**: Requires 1 approval from any senior team member (Tech Lead, Senior Engineer, Fullstack)
-- **Main branch**: Requires 1 approval from CODEOWNERS (Tech Lead or Senior Engineer)
+- Follow the repository's setup and style guidelines.
+- Ensure code builds successfully.
+- Include tests for new functionality.
+- Update documentation where appropriate.
 
-**Review Expectations:**
-- Staging PRs: Reviewed within 4 hours (ship fast, test on staging)
-- Main PRs: Reviewed within 1 day (ship safely to production)
-- All conversation threads must be resolved before merging
+Refer to the team documentation for complete contribution and review guidelines.
 
-**Before submitting a PR:**
+---
 
-**For Python projects:**
-1. Ensure pre-commit hooks are installed: `uv run pre-commit install`
-2. Run all quality checks: `uv run pre-commit run --all-files`
-3. Fix any issues reported by the checks
-4. All tests must pass
+## Branching and Review Process
 
-**For all projects:**
-- Follow the repository's specific setup instructions
-- Write tests for new functionality
-- Update documentation as needed
-- Review our [Team Playbook](./docs/README.md) for how we work
+- The `staging` branch deploys to the staging environment.
+- The `main` branch deploys to production.
+
+**Approval requirements:**
+- Staging: one approval from a senior engineer.
+- Main: one approval from the code owners.
+
+**Review expectations:**
+- Staging pull requests are reviewed within 4 hours.
+- Main pull requests are reviewed within 1 day.
 
 ---
 
 ## Deprecation Notice
 
-| Deprecated Repo | Replaced by                   | Notes                                     |
-|------------------|-------------------------------|-------------------------------------------|
-| `dp-app-legacy`  | `dp-api` + `dp-app`           | Split into backend and frontend repos     |
-|                  |                               | Retained as `dp-app-legacy` for reference |
+| Deprecated Repository | Replacement | Notes |
+|----------------------|-------------|---------------------------|
+| `dp-app-legacy` | `dp-api` and `dp-app` | Retained for reference |
+
+---
