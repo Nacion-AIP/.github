@@ -6,7 +6,7 @@ This document provides a brief overview of the repository structure, naming conv
 
 ---
 
-## Team Playbook
+## Team Handbook
 
 The complete documentation for development culture, workflows, standards, processes, deployment, onboarding, and engineering practices is maintained in the team's knowledge base.
 
